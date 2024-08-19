@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'name' => 'talent/techkira',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'b91a00436935ff104cab8965410d1700d6c23eda',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'symfony/deprecation-contracts' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
+            'aliases' => array(
+                0 => '3.5.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'symfony/polyfill-ctype' => array(
+            'pretty_version' => '1.x-dev',
+            'version' => '1.9999999.9999999.9999999-dev',
+            'reference' => '0424dff1c58f028c451efff2045f5d92410bd540',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/serializer' => array(
+            'pretty_version' => '6.4.x-dev',
+            'version' => '6.4.9999999.9999999-dev',
+            'reference' => 'a75d03d7720417f8a654e73e8f02acdea8779cd0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/serializer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'talent/techkira' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'b91a00436935ff104cab8965410d1700d6c23eda',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

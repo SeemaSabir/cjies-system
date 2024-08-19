@@ -1,0 +1,19 @@
+{
+    "name": "talent/techkira",
+    "type": "library",
+    "require": {
+        "symfony/serializer": "6.4.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Talent\\Techkira\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Warorua",
+            "email": "waroruaalex640@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
