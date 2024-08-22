@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/Fav Icon (4).png">
+    <link rel="icon" type="image/png" href="./assets/img/Fav Icon (4).png">
+
+    <title>CJIES System</title>
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
+
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet"/>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.5" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+
+    <style>
+        .card {
+            box-shadow: 0 4px 25px 1px rgb(0 0 0 / 5%), 0 1px 2px 1px rgb(0 0 0 / 6%);
+        }
+
+        .main {
+            max-width: 200px;
+            width: 200px;
+        }
+
+        .has-search .form-control {
+            padding-left: 2.375rem;
+        }
+
+        .has-search .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            /* width: 2.375rem; */
+            padding-left: 15px;
+            height: 2.375rem;
+            line-height: 2.375rem;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+
+        }
+
+        .search:focus {
+            display: block;
+            border-bottom: 1px solid #aaa;
+            border-radius: 2px;
+        }
+
+        .textHover:hover {
+            color: #26b86e !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show" style="background-color: #FFFFFF;">
+
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3" id="sidenav-main"
+       style="background-color: #FFFFFF;box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);">
+    <div class="sidenav-header">
+        <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+           aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0" href="../Website/index.html" target="_blank">
+            <img src="./assets/img/logo.png" alt="main_logo" style="width: 50%;margin-left: 35px;">
+        </a>
+    </div>
+    <hr class="horizontal dark mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+        <ul class="navbar-nav">
+            <li class="nav-item mb-2 mt-0">
+                <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-dark " aria-controls="ProfileNav"
+                   role="button" aria-expanded="false">
+                    <img src="./assets/img/no-image.jpg" class="avatar" alt="">
+                    <span class="nav-link-text ms-2 ps-1" style="font-weight: 400;">Alex Brooklyn</span>
+                </a>
+                <div class="collapse" id="ProfileNav" style="">
+                    <ul class="nav ">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark " href="login.html">
+                                <span class="sidenav-mini-icon"> L </span>
+                                <span class="sidenav-normal  ms-3  ps-1" style="font-weight: 400;"> Logout</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <hr class="horizontal dark mt-0">
+
+            <li class="nav-item">
+                <a href="dashboard.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;">dashboard </span>
+                    <span class="nav-link-text text-dark  ps-4 px-2 "
+                          style="color:#3C4856 !important;font-weight: 400">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="users.html" class="nav-link text-white bg-light active" style="color:#00AB55 !important;">
+                    <i class="material-icons-round float-start" style="color:#00AB55!important;">person</i>
+                    <span class="nav-link-text  px-3 " style="color:#00AB55!important;font-weight: 400;">Users</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="mentorship.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;">article </span>
+                    <span class="nav-link-text text-dark  ps-4 px-2 "
+                          style="color:#3C4856 !important;font-weight: 400">Mentorship</span>
+                </a>
+            </li>
+<li class="nav-item">
+                <a href="courses.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;">article </span>
+                    <span class="nav-link-text text-dark  px-4  " style="color:#3C4856 !important;font-weight: 400">Courses</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="jobs.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;"> meeting_room</span>
+                    <span class="nav-link-text text-dark px-4 "
+                          style="color:#3C4856 !important;font-weight: 400">Jobs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="tenders.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;"> meeting_room</span>
+                    <span class="nav-link-text text-dark px-4 "
+                          style="color:#3C4856 !important;font-weight: 400">Tenders</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="supports.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;">help</span>
+                    <span class="nav-link-text text-dark  px-4  " style="color:#3C4856 !important;font-weight: 400">Support</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="settings.html" class="nav-link text-dark " style="color:#3C4856 !important;">
+                    <span class="material-symbols-outlined" style="color:#3C4856 !important;">settings</span>
+                    <span class="nav-link-text text-dark px-4" style="color:#3C4856 !important;font-weight: 400">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<main class="main-content border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
+        <div class="container-fluid py-1 px-3">
+
+            <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
+                <a href="javascript:;" class="nav-link text-body p-0">
+                    <div class="sidenav-toggler-inner">
+                        <i class="sidenav-toggler-line"></i>
+                        <i class="sidenav-toggler-line"></i>
+                        <i class="sidenav-toggler-line"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                <div class="col-lg-11 px-4">
+                    <div class="main"></div>
+                </div>
+
+                <ul class="navbar-nav  justify-content-end">
+                    <li class="nav-item  pe-3 pt-2">
+                        <a href="javascript:;" class="nav-link text-body p-0 position-relative" id="dropdownMenuButton"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="material-icons cursor-pointer">
+                                notifications
+                            </i>
+                        </a>
+                    </li>
+                    <img src="./assets/img/no-image.jpg" alt="bruce" class="rounded-circle shadow-lg" style="width: 50%;">
+                    <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-2">
+        <div class="col-lg-12 d-flex flex-wrap justify-content-between">
+            <div class="col-lg-6 px-1">
+                <div class="card card-body">
+                    <p class="mb-0 font-weight-normal text-sm text-end">
+                        06/26/2023
+                    </p>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-sm-auto col-4">
+                            <div class="avatar avatar-xl position-relative">
+                                <img src="./assets/img/no-image.jpg" alt="bruce" class="w-100 rounded-circle shadow-lg">
+                            </div>
+                        </div>
+                        <div class="col-sm-auto col-8 my-auto">
+                            <div class="h-120">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="mb-1 font-weight-bolder">
+                                        Mark - Student <span style="color: #2fb166" class="text-sm">Verified</span>
+                                    </h5>
+                                </div>
+
+                                <p class="mb-1 font-weight-normal text-sm">
+                                    test@user.com
+                                </p>
+                                <p class="mb-4 font-weight-normal text-sm">
+                                    (123) 456 7890
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-auto ms-sm-auto  d-flex">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 px-1">
+                <div class="card card-body" id="profile">
+                    <div class="row justify-content-center align-items-center">
+                        <h6 class="font-weight-bolder">Educational Documents & Certifications</h6>
+                        <p class="font-weight-normal text-sm">View and manage certificates and educational documents here</p>
+                        <div class="text-end mt-3">
+                            <a href="certificates.html" class="btn btn-sm btn-lg  mb-0 text-white" style="background-color: #26B86E;text-transform: none;">Certificates
+                            </a>
+                            <a href="educational_documents.html" class="btn btn-sm btn-lg  mb-0" style="border: 1px solid #26B86E; color: #26B86E; text-transform: none;">Educational Documents
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body p-3 position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 text-start">
+                                <p class="text-sm mb-1 text-capitalize font-weight-bold">Completed Courses</p>
+                                <h4 class="font-weight-bolder mb-0">
+                                    12
+                                </h4>
+                            </div>
+                            <div class="col-lg-5 ml-4">
+                                <img src="./assets/img/line03.jpeg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-sm-0 mt-4">
+                <div class="card">
+                    <div class="card-body p-3 position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 text-start">
+                                <p class="text-sm mb-1 text-capitalize font-weight-bold">Certifications</p>
+                                <h4 class="font-weight-bolder mb-0">
+                                   3
+                                </h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <img src="./assets/img/line01.jpeg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-sm-0 mt-4">
+                <div class="card">
+                    <div class="card-body p-3 position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 text-start">
+                                <p class="text-sm mb-1 text-capitalize font-weight-bold">Internships</p>
+                                <h4 class="font-weight-bolder mb-0">
+                                    3
+                                </h4>
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="./assets/img/line02.jpeg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body p-3 position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 text-start">
+                                <p class="text-sm mb-1 text-capitalize font-weight-bold">Projects Submitted</p>
+                                <h4 class="font-weight-bolder mb-0">
+                                    8
+                                </h4>
+                            </div>
+                            <div class="col-lg-5 ml-4">
+                                <img src="./assets/img/line03.jpeg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-sm-0 mt-4">
+                <div class="card">
+                    <div class="card-body p-3 position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 text-start">
+                                <p class="text-sm mb-1 text-capitalize font-weight-bold">Attendance Rate</p>
+                                <h4 class="font-weight-bolder mb-0">
+                                    98%
+                                </h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <img src="./assets/img/line01.jpeg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-sm-0 mt-4">
+                <div class="card">
+                    <div class="card-body p-3 position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 text-start">
+                                <p class="text-sm mb-1 text-capitalize font-weight-bold">Meeting Deadlines</p>
+                                <h4 class="font-weight-bolder mb-0">
+                                    100%
+                                </h4>
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="./assets/img/line02.jpeg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-8">
+                <div class="card mb-4">
+                    <div class="card-header pb-0">
+                        <h6>Mark's Performance Analytics</h6>
+                    </div>
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-3">
+                            <table class="table align-items-center mb-0" id="datatable-basic">
+                                <thead>
+                                <tr class="text-center">
+                                    <th class="text-secondary text-xs font-weight-bolder opacity-7">Category</th>
+                                    <th class="text-secondary text-xs font-weight-bolder opacity-7"></th>
+                                    <th class="text-secondary text-xs font-weight-bolder opacity-7">Metric</th>
+                                    <th class="text-secondary text-xs font-weight-bolder opacity-7">Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="mb-0">
+                                    <td>
+                                          <span class="badge badge-dot  ">
+                                            <i class="bg-info" style="font-size: 25px; background: #f44335 !important;"></i>
+                                            <span class="text-dark text-xs">Academic Performance</span>
+                                          </span>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">GPA (Year 4)</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">3.8</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Class Rank</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">12th out of 150</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">SAT Math</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">720</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td>
+                                          <span class="badge badge-dot  ">
+                                            <i class="bg-info" style="font-size: 25px; background: #f44335 !important;"></i>
+                                            <span class="text-dark text-xs">Engagement & Skills</span>
+                                          </span>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Class Participation</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">90%</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Extracurricular Activities</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Soccer Team Captain</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Volunteering Hours</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">50</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Critical Thinking Score (Out of 10)</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">9</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Programming Proficiency (Python)</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">4/5</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td>
+                                          <span class="badge badge-dot  ">
+                                            <i class="bg-info" style="font-size: 25px; background: #f44335 !important;"></i>
+                                            <span class="text-dark text-xs">Career Readiness</span>
+                                          </span>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Internship</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Data Analyst at Tech Startup</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Career Interest</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Data Science, Software Development</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">Portfolio Quality</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">4/5</p>
+                                    </td>
+                                </tr>
+                                <tr class="mb-0">
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0"> Success Probability in STEM Careers</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-sm font-weight-normal mb-0">85%</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card z-index-2">
+                    <div class="card-header px-3 py-2">
+                        <h6 class="mb-0 text-center">Completed Courses, Total Certificates, Internships</h6>
+                    </div>
+                    <div class="card-body d-flex px-3 py-2">
+                        <div class="chart w-100">
+                            <canvas id="doughnut-chart" class="chart-canvas" height="258" width="456" style="display: block; box-sizing: border-box; height: 230px; width: 406.1px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!--   Core JS Files   -->
+<script src="./assets/js/core/popper.min.js"></script>
+<script src="./assets/js/core/bootstrap.min.js"></script>
+<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="./assets/js/plugins/datatables.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Kanban scripts -->
+<script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+<script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<script src="./assets/js/plugins/chartjs.min.js"></script>
+<script>
+    // Doughnut chart
+    var ctx3 = document.getElementById("doughnut-chart").getContext("2d");
+
+    new Chart(ctx3, {
+        type: "doughnut",
+        data: {
+            labels: ['Completed Courses', 'Total Certificates', 'Internships'],
+            datasets: [{
+                label: "Projects",
+                // weight: 9,
+                // cutout: 100,
+                // tension: 0.9,
+                // pointRadius: 2,
+                borderWidth: 10,
+                backgroundColor: ['#FFAB00', '#FF5630', '#36B37E'],
+                data: [30, 30, 30,],
+                // fill: false
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                    },
+                    ticks: {
+                        display: false
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                    },
+                    ticks: {
+                        display: false,
+                    }
+                },
+            },
+        },
+    });
+
+</script>
+
+<script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+            damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+
+    if (document.getElementById('datatable-basic')) {
+        const dataTableSearch = new simpleDatatables.DataTable("#datatable-basic", {
+            searchable: true,
+            fixedHeight: false,
+            perPage: 10
+        });
+    }
+</script>
+
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="./assets/js/material-dashboard.min.js?v=3.0.5"></script>
+</body>
+
+</html>
